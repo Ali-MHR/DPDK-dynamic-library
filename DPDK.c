@@ -123,7 +123,6 @@ int DPDK_pkts_rcv(void)
 
 
 
-int g=0;
 int capture_dpdk(struct pcap_pkthdr* h,char* packet)
 {
 		struct rte_mbuf * m;
@@ -145,30 +144,11 @@ int capture_dpdk(struct pcap_pkthdr* h,char* packet)
 		rte_pktmbuf_free(m);
 		m = NULL;
 		
-		g++;
-		if(g==1000000)
-		{
-			printf("------   %u  --------\n", rte_ring_count (intermediate_ring) );
-			g=0;
-		}
+
 
 		return 1;
 }
 
-
-void free_dpdk(void)
-{
-/*
-	g++;
-	if(g==1000000)
-	{
-		printf("------   %u  --------\n",rte_mempool_count (pktmbuf_pool) );
-		g=0;
-	}
-	rte_pktmbuf_free(m);
-	m = NULL;
-*/
-}
 
 
 

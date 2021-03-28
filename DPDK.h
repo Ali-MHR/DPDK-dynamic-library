@@ -37,7 +37,6 @@ static void init_port(int);
 void print_stats (void);
 int capture_dpdk(struct pcap_pkthdr*,char*);
 void *start_dpdk(void *arg);
-void free_dpdk(void);
 
 int DPDK_pkts_rcv(void);
 
