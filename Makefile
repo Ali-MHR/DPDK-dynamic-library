@@ -22,4 +22,5 @@ CFLAGS += $(WERROR_FLAGS)
 
 include $(RTE_SDK)/mk/rte.extapp.mk
 
+# with version 1.8.0 the dpdk library is named as libintel_dpdk.so
 gcc -shared -static -o libDPDK.so DPDK.o -lintel_dpdk
