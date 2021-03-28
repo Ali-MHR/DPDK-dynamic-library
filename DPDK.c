@@ -80,6 +80,10 @@ int DPDK_pkts_rcv(void)
 		/* Increasing reading port number in Round-Robin logic */
 		read_from_port = (read_from_port + 1) % nb_sys_ports;
 		
+		/*
+		*  Check if there is no packet on interface and do a one micro sleep if continuous tries return no packet and exceeded treshold count
+		*  This mechanism is intended to avoid busy waiting 
+		*/
 		if(nb_rx == 0)
 		{
 			no_packet++;
@@ -122,7 +126,11 @@ int DPDK_pkts_rcv(void)
 }
 
 
-
+/*
+*   Main function to fetch new packet 
+* 
+*	Input parameters are based on PCAP packet structure
+*/
 int capture_dpdk(struct pcap_pkthdr* h,char* packet)
 {
 		struct rte_mbuf * m;
