@@ -1,5 +1,6 @@
 # DPDK dynamic library
-# Tested with DPDK v 1.8.0
+
+Tested with DPDK v 1.8.0
 
 Migrate PCAP packet capture part of your application into DPDK Fast Packet Capture by building .so dynamic library as a simaple stand-alone wrapper for utilizing Intel DPDK packet capture feature
 
