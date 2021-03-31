@@ -31,7 +31,7 @@ To use the packet capture function just call capture_dpdk(struct pcap_pkthdr*,ch
 
 To be compatible with pcap library the packet receiving function is declared with PCAP packet structure
 
-build your application with builded libDPDK.so library 
+build your application with pre-build libintel_dpdk.so library 
 
 Load the DPDK driver and bind network interface to the DPDK driver(https://doc.dpdk.org/guides/index.html)
 
