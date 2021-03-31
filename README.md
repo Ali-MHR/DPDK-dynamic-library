@@ -21,7 +21,7 @@ export RTE_TARGET=x86_64-native-linuxapp-gcc
 make install T=x86_64-native-linuxapp-gcc
  
  
-2. After building intel_dpdk.so file, use make command to build the .so file
+2. After building libintel_dpdk.so file, use make command to build the .so file
 
 
  
@@ -31,7 +31,7 @@ To use the packet capture function just call capture_dpdk(struct pcap_pkthdr*,ch
 
 To be compatible with pcap library the packet receiving function is declared with PCAP packet structure
 
-build your application with pre-build libintel_dpdk.so library 
+build your application with pre-built libintel_dpdk.so library 
 
 Load the DPDK driver and bind network interface to the DPDK driver(https://doc.dpdk.org/guides/index.html)
 
